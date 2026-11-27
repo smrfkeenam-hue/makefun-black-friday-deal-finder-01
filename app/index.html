@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DealHunt — Black Friday 2026 deal finder</title>
+<meta name="description" content="DealHunt checks real Black Friday 2026 deals by hand: sale price, usual price, discount and a verdict on each, with search and filters. Every price was checked on 27 November 2026 at the store that sells it.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header-inner">
+    <h1><span class="dealhunt-mark">Deal</span>Hunt</h1>
+    <p class="site-tagline">Black Friday 2026, checked by hand. Every deal below lists its store, its sale price, its usual price, its discount and when the price was read — plus an honest call on whether it is really a deal.</p>
+    <p class="site-stats" id="stats"><span><strong>19</strong> deals</span> <span><strong>4</strong> stores</span> <span><strong>$4,190.98</strong> total savings</span> <span>Checked <strong>27 Nov 2026</strong></span></p>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div class="toolbar-inner">
+    <div class="toolbar-row">
+      <input class="search-box" id="search" type="search" placeholder="Search deals, stores, categories…" aria-label="Search deals">
+      <span class="field"><label for="store-filter">Store</label>
+      <select id="store-filter">
+        <option value="All">All stores</option>
+        <option value="Amazon">Amazon</option>
+        <option value="Best Buy">Best Buy</option>
+        <option value="Dell">Dell</option>
+        <option value="Walmart">Walmart</option>
+      </select></span>
+      <span class="field"><label for="discount-filter">Discount</label>
+      <select id="discount-filter">
+        <option value="0">Any discount</option>
+        <option value="25">25% off or more</option>
+        <option value="40">40% off or more</option>
+        <option value="50">50% off or more</option>
+      </select></span>
+      <span class="field"><label for="sort">Sort</label>
+      <select id="sort">
+        <option value="best">Best deals first</option>
+        <option value="savings">Biggest $ savings</option>
+        <option value="price-low">Lowest price</option>
+        <option value="price-high">Highest price</option>
+      </select></span>
+    </div>
+    <div class="chips" id="category-chips" aria-label="Filter by category"></div>
+    <p class="result-count" id="result-count">Showing all 19 deals</p>
+  </div>
+</div>
+
+<main>
+  <div class="deal-grid" id="deal-grid"></div>
+  <noscript><p style="max-width: 1180px; margin: 0 auto; padding: 20px;">DealHunt needs JavaScript to search and filter the deals.</p></noscript>
+</main>
+
+<footer class="site-footer">
+  <h2>How the prices were checked</h2>
+  <p>Every price on this page was read on 27 November 2026, Black Friday, at the store's own listing — or in a deals source that names the store, which each card cites. The discount on a card is computed from the two prices shown, so the numbers always add up. Prices can change or sell out; check the store page before you buy.</p>
+  <p><strong>NEW LOW</strong> means the lowest price ever seen for that item. <strong>STRONG PRICE</strong> means a deep cut on a genuinely good price. <strong>ROUTINE DEAL</strong> means a real discount, but a modest one. Where a store's own was-price differs from the list price, the card says so.</p>
+  <p>DealHunt is an independent price check, not a store. Store names and product names belong to their owners; the links go to the stores.</p>
+</footer>
+
+<script type="module" src="render.js"></script>
+</body>
+</html>
